@@ -2,6 +2,12 @@
 
 There are several React lifecycle methods that help us manage the asynchronous and non-determinate nature of a Component during it’s lifetime in an app – we need provided methods to help us handle when a component is created, rendered, updates, or removed from the DOM.
 
+At the highest level, React components have lifecycle events that fall into three general categories:
+
+1. Initialization
+2. State/Property Updates
+3. Destruction
+
 Let’s first classify and define the life-cycle methods:
 
 ## The "Will's" - invoked right before the event represented occurs.

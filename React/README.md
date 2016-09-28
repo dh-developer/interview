@@ -1,14 +1,18 @@
 # React Interview Questions
 
-### What is React?  
+### What is React?
+
+React is an open-source JavaScript library created by Facebook for building complex, interactive UIs in web and mobile applications.
 
 * What makes React a good tool and what are the parts of it you don't like.
 * Talk about projects you've used it for and why was the decision made?
 * Describe life cycle [[more](Component Lifecycle.md)]
 * How do you prefer to split up components?
+* What can you tell me about JSX? [[more](JSX.md)]
 * Explain the Virtual DOM, and a pragmatic overview of how React renders it to the DOM.
 * What is the significance of refs in React? [[more](Refs.md)]
 * What is the significance of keys in React? [[more](Keys.md)]
+* What are stateless components? [[more](Stateless.md)]
 
 ### What is Redux?
 
@@ -49,7 +53,7 @@ What are the advantages and disadvantages of using one or the other?  Include no
 
 ### Problems With Below Code
 
-Identify two problems with the code below - 
+Identify two problems with the code below [[more](Questions.md)]  
 
 ```
 class MyComponent extends React.Component {
@@ -59,38 +63,7 @@ class MyComponent extends React.Component {
             clicks: 0
         };
     }
-
-    componentDidMount() {
-        this.refs.myComponentDiv.addEventListener(
-            ‘click’, 
-            this.clickHandler
-        );
-    }
-
-    componentWillUnmount() {
-        this.refs.myComponentDiv.removeEventListener(
-            ‘click’, 
-            this.clickHandler
-        );
-    }
-
-    clickHandler() {
-        this.setState({
-            clicks: this.clicks + 1
-        });
-    }
-
-    render() {
-        let children = this.props.children;
-
-        return (
-            <div className="my-component" ref="myComponentDiv">
-                <h2>My Component ({this.state.clicks} clicks})</h2>
-                <h3>{this.props.headerText}</h3>
-                {children}
-            </div>
-        );
-    }
+    ...
 }
  ```
 
