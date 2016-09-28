@@ -6,6 +6,9 @@
 * Talk about projects you've used it for and why was the decision made?
 * Describe life cycle [See component life cycle doc]
 * How do you prefer to split up components?
+* Explain the Virtual DOM, and a pragmatic overview of how React renders it to the DOM.
+* What is the significance of refs in React?
+* What is the significance of keys in React?
 
 ### What is Redux?
 
