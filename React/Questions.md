@@ -1,5 +1,26 @@
 # Question 1: Explain this Code
 
+### Given the code below, can you identify two problems?
+
+1. The constructor does not pass its props to the super class. It should include the following line:
+
+    ```
+    constructor(props) {
+            super(props);
+            // ...
+        }
+    ```
+
+2. The event listener (when assigned via addEventListener()) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
+
+    ```
+    constructor(props) {
+        super(props);
+              this.clickHandler = this.clickHandler.bind(this);
+        // ...
+    }
+    ```
+
 ```
 class MyComponent extends React.Component {
     constructor(props) {
@@ -42,27 +63,6 @@ class MyComponent extends React.Component {
     }
 }
 ```
-
-### Given the code defined above, can you identify two problems?
-
-1. The constructor does not pass its props to the super class. It should include the following line:
-
-    ```
-    constructor(props) {
-            super(props);
-            // ...
-        }
-    ```
-
-2. The event listener (when assigned via addEventListener()) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
-
-    ```
-    constructor(props) {
-        super(props);
-              this.clickHandler = this.clickHandler.bind(this);
-        // ...
-    }
-    ```
 
 ### Can you explain what the output of this class actually does? How would you use it in an application?
 
