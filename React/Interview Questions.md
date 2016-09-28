@@ -70,11 +70,12 @@ class MyComponent extends React.Component {
             this.clickHandler
         );
     }
+}
  ```
 
 1. The constructor does not pass its props to the super class. It should include the following line:
 
-```super(props);``` missing from constructor
+```super(props); // missing from constructor```
 
 2. The event listener (when assigned via addEventListener()) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
 
