@@ -4,11 +4,11 @@
 
 * What makes React a good tool and what are the parts of it you don't like.
 * Talk about projects you've used it for and why was the decision made?
-* Describe life cycle [Component Lifecycle.md](Component Lifecycle.md)
+* Describe life cycle [[details](Component Lifecycle.md)]
 * How do you prefer to split up components?
 * Explain the Virtual DOM, and a pragmatic overview of how React renders it to the DOM.
-* What is the significance of refs in React? [Refs.md](Refs.md)
-* What is the significance of keys in React? [Keys.md](Keys.md)
+* What is the significance of refs in React? [[details]](Refs.md)]
+* What is the significance of keys in React? [[details](Keys.md)]
 
 ### What is Redux?
 
@@ -24,7 +24,7 @@ Let's say you are using a jQuery library.  How would you organize the code and i
 
 ### ES5 vs ES6
 
-What are the advantages and disadvantages of using one or the other? Include notes about default props, initial state, PropTypes, and DisplayName. [ES5 vs ES6.md](ES5 vs ES6.md)
+What are the advantages and disadvantages of using one or the other? Include notes about default props, initial state, PropTypes, and DisplayName. [[details](ES5 vs ES6.md)]
 
 ### React-Router library
 
