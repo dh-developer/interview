@@ -66,7 +66,7 @@ class MyComponent extends React.Component {
     }
     ```
 
-Can you explain what the output of this class actually does? How would you use it in an application?
+### Can you explain what the output of this class actually does? How would you use it in an application?
 
 This class creates a ```<div />``` element and attaches a click listener to it. The content of this component includes a ```<h2 />``` element that updates every time the user clicks on the parent ```<div />```, as well as an ```<h3 />``` element containing a provided title and whatever child elements were passed to it.
 
