@@ -1,7 +1,5 @@
 # Question 1: Explain this Code
 
-As I mentioned at the beginning of this article, every technical interview will ask you to look at (and probably write) some code. Take a look at the code below and it will help you be more prepared for a coding challenge:
-
 ```
 class MyComponent extends React.Component {
     constructor(props) {
