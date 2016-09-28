@@ -19,6 +19,7 @@ React is an open-source JavaScript library created by Facebook for building comp
 * How does data flow through the app when using Redux?
 * How do you separate actions, reducers, and where do you prefer to dispatch actions? 
 * How do you prefer to deal with asynchronous actions? (What about Auth issues where have to reAuth and try again?)
+* Describe the Flux pattern [[more](Flux.md)]
 
 Most people can study those questions, so we like to put an emphasis on their thoughts and experiences with Redux or React. What was the most challenging aspect? Setting up the folder structure? Redux boilerplate? Random React/JSX specific errors? Nesting components? Passing functions and props around? Deploying? Setting up webpack, hot reloader, styles? This generally gives a better sense that they've used the tool and have a deep understanding instead of spending a week memorizing the documentation.
 
