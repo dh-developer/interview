@@ -7,7 +7,7 @@
 * Describe life cycle [[details](Component Lifecycle.md)]
 * How do you prefer to split up components?
 * Explain the Virtual DOM, and a pragmatic overview of how React renders it to the DOM.
-* What is the significance of refs in React? [[details]](Refs.md)]
+* What is the significance of refs in React? [[details](Refs.md)]
 * What is the significance of keys in React? [[details](Keys.md)]
 
 ### What is Redux?
