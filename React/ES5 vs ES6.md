@@ -1,3 +1,5 @@
+# ES5 vs ES6 Differences
+
 Creating React Components the ES5 way involves using the React.createClass() method:
 
 ```
