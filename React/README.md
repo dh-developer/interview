@@ -24,7 +24,8 @@ Let's say you are using a jQuery library.  How would you organize the code and i
 
 ### ES5 vs ES6
 
-What are the advantages and disadvantages of using one or the other? Include notes about default props, initial state, PropTypes, and DisplayName. [[more](ES5 vs ES6.md)]
+What are the advantages and disadvantages of using one or the other?
+Include notes about default props, initial state, PropTypes, and DisplayName. [[more](ES5 vs ES6.md)]
 
 ### React-Router library
 
