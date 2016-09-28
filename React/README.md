@@ -24,8 +24,7 @@ Let's say you are using a jQuery library.  How would you organize the code and i
 
 ### ES5 vs ES6
 
-What are the advantages and disadvantages of using one or the other?
-Include notes about default props, initial state, PropTypes, and DisplayName. [[more](ES5 vs ES6.md)]
+What are the advantages and disadvantages of using one or the other?  Include notes about default props, initial state, PropTypes, and DisplayName. [[more](ES5 vs ES6.md)]
 
 ### React-Router library
 
@@ -74,6 +73,24 @@ class MyComponent extends React.Component {
             this.clickHandler
         );
     }
+
+    clickHandler() {
+        this.setState({
+            clicks: this.clicks + 1
+        });
+    }
+
+    render() {
+        let children = this.props.children;
+
+        return (
+            <div className="my-component" ref="myComponentDiv">
+                <h2>My Component ({this.state.clicks} clicks})</h2>
+                <h3>{this.props.headerText}</h3>
+                {children}
+            </div>
+        );
+    }
 }
  ```
 
@@ -90,3 +107,5 @@ class MyComponent extends React.Component {
 
 * https://www.codementor.io/reactjs/tutorial/5-essential-reactjs-interview-questions
 * https://www.toptal.com/react/interview-questions
+* https://www.reddit.com/r/reactjs/
+* https://www.reddit.com/r/reactjs/comments/54xnao/fat_arrow_vs_autobind_vs_bindbindbindbindbind/
