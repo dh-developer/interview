@@ -35,7 +35,7 @@ class MyComponent extends React.Component {
         let children = this.props.children;
 
         return (
-            <div className=”my-component” ref=”myComponentDiv”>
+            <div className="my-component" ref="myComponentDiv">
                 <h2>My Component ({this.state.clicks} clicks})</h2>
                 <h3>{this.props.headerText}</h3>
                 {children}
@@ -73,7 +73,7 @@ This class creates a ```<div />``` element and attaches a click listener to it. 
 To use this class, we would import it into another class and use it like this:
 
 ```
-<MyComponent headerText=”A list of paragraph tags”>
+<MyComponent headerText="A list of paragraph tags">
     <p>First child.</p>
     <p>Any other <span>number</span> of children...</p>
 </MyComponent>

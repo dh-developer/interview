@@ -71,7 +71,7 @@ class MyComponent extends React.Component {
 
     ```super(props); // missing from constructor```
 
-2. The event listener (when assigned via ```addEventListener()```) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
+2. The event listener (when assigned via ```addEventListener()```) is not properly scoped because ES2015 doesn't provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
 
     ```this.clickHandler = this.clickHandler.bind(this)``` 
 

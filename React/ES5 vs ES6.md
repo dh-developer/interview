@@ -32,7 +32,7 @@ This Comments Component can now be rendered either inside another React Componen
 
 ```ReactDOM.render(<Comments />, document.querySelector('.app'))```
 
-ES5 Components have some particular qualities, which we’ll note:
+ES5 Components have some particular qualities, which we'll note:
 
 Like the above example, to set the state to an initial value, create the getInitialState() function on the Component. What it returns will be the initial state for a Component when rendered.
 
@@ -40,7 +40,7 @@ Additionally, you can set the default props for the component to have a certain 
 
 The displayName is used in debugging and error reporting by React. If you use JSX, then the displayName is automatically filled out.
 
-For some, it is common practice to denote a custom method added to a React Component by prefixing it with an underscore, hence _handleClick. _handleClick is passed as the onClick callback for a button in the code above. We can’t do this so easily in the ES6 API of React, because the ES5 version has autobinding, but the ES6 does not. Let’s take a look at what autobinding provides:
+For some, it is common practice to denote a custom method added to a React Component by prefixing it with an underscore, hence _handleClick. _handleClick is passed as the onClick callback for a button in the code above. We can't do this so easily in the ES6 API of React, because the ES5 version has autobinding, but the ES6 does not. Let's take a look at what autobinding provides:
 Auto-binding
 
 Consider the following piece of code:
@@ -54,7 +54,7 @@ var thing = {
 window.addEventListener('keyup', thing.speak)
 ```
 
-Invoking thing.speak() in the console will log "jen", but pressing a key will log undefined because the context of the callback is the global object. The browser’s global object – window – becomes this inside the speak() function, so this.name becomes window.name, which is undefined.
+Invoking thing.speak() in the console will log "jen", but pressing a key will log undefined because the context of the callback is the global object. The browser's global object – window – becomes this inside the speak() function, so this.name becomes window.name, which is undefined.
 
 React in ES5 automatically does autobinding, effectively doing the following:
 
@@ -88,7 +88,7 @@ Comments.displayName = 'Comments'
 
 1. Notice that in ES6, we have a constructor() that we use to set the initial state.  
 2. We can add default props and a display name as properties of the new class created.  
-3. The render() method, which works as normal, but we’ve had to alter how we pass in the callback function. This current approach (<button onClick={() => this._handleClick}>click me!</button>) will create a new function each time the component is re-rendered; so if it becomes a performance bottleneck, you can always bind manually and store the callback:
+3. The render() method, which works as normal, but we've had to alter how we pass in the callback function. This current approach (<button onClick={() => this._handleClick}>click me!</button>) will create a new function each time the component is re-rendered; so if it becomes a performance bottleneck, you can always bind manually and store the callback:
 
 ```
 class Comments extends React.Component {

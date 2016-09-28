@@ -8,7 +8,7 @@ class MyComponent extends React.Component {
         let props = this.props;
 
         return (
-            <div className=”my-component”>
+            <div className="my-component">
                 <a href={props.url}>{props.name}>/a>
             </div>
         );
@@ -36,7 +36,7 @@ class MyComponent extends React.Component {
         let props = this.props;
 
         return (
-            <div className=”my-component”>
+            <div className="my-component">
                 <AnotherClass {...props} />
             </div>
         );
