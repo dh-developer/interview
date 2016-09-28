@@ -25,7 +25,7 @@ class List extends Component {
 DOM.render(<List />, document.body)
 ```
 
-this.refs.someThing inside componentDidUpdate() used to refer to a special identifier that we could use with ```React.findDOMNode(refObject)``` – which would provide us with the DOM node that exists on the DOM at this very specific instance in time. Now, React automatically attaches the DOM node to the ref, meaning that ```this.refs.someThing``` will directly point to a DOM Element instance.
+```this.refs.someThing``` inside ```componentDidUpdate()``` used to refer to a special identifier that we could use with ```React.findDOMNode(refObject)``` – which would provide us with the DOM node that exists on the DOM at this very specific instance in time. Now, React automatically attaches the DOM node to the ref, meaning that ```this.refs.someThing``` will directly point to a DOM Element instance.
 
 Additionally, a ref can be a function that takes a single input. This is a more dynamic means for you assign and store the DOM nodes as variables in your code. For example:
 

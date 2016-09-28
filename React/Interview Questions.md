@@ -4,11 +4,11 @@
 
 * What makes React a good tool and what are the parts of it you don't like.
 * Talk about projects you've used it for and why was the decision made?
-* Describe life cycle [See component life cycle doc]
+* Describe life cycle [Component Lifecycle.md]
 * How do you prefer to split up components?
 * Explain the Virtual DOM, and a pragmatic overview of how React renders it to the DOM.
-* What is the significance of refs in React?
-* What is the significance of keys in React?
+* What is the significance of refs in React? [Refs.md]
+* What is the significance of keys in React? [Keys.md]
 
 ### What is Redux?
 
@@ -24,7 +24,7 @@ Let's say you are using a jQuery library.  How would you organize the code and i
 
 ### ES5 vs ES6
 
-What are the advantages and disadvantages of using one or the other? Include notes about default props, initial state, PropTypes, and DisplayName. [See ES5 vs ES6 doc]
+What are the advantages and disadvantages of using one or the other? Include notes about default props, initial state, PropTypes, and DisplayName. [ES5 vs ES6.md]
 
 ### React-Router library
 
@@ -80,7 +80,7 @@ class MyComponent extends React.Component {
 
     ```super(props); // missing from constructor```
 
-2. The event listener (when assigned via addEventListener()) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
+2. The event listener (when assigned via ```addEventListener()```) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
 
     ```this.clickHandler = this.clickHandler.bind(this)``` 
 

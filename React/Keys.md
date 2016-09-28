@@ -65,6 +65,6 @@ class List extends Component {
 DOM.render(<List />, document.body)
 ```
 
-The setInterval() occurring on mount reorders the items array in this.state every 20ms. Computationally, if React is reordering the items in state, then it would manipulate the DOM elements themselves instead of “dragging” them around between positions in the <ul>.
+The setInterval() occurring on mount reorders the items array in this.state every 20ms. Computationally, if React is reordering the items in state, then it would manipulate the DOM elements themselves instead of “dragging” them around between positions in the ```<ul>```.
 
-It is worth noting here that if you render a homogenous array of children – such as the <li>’s above – React will actually console.warn() you of the potential issue, giving you a stack trace and line number to debug from. You won’t have to worry about React quietly breaking.
+It is worth noting here that if you render a homogenous array of children – such as the ```<li>```’s above – React will actually ```console.warn()``` you of the potential issue, giving you a stack trace and line number to debug from. You won’t have to worry about React quietly breaking.
