@@ -1,0 +1,87 @@
+# React Interview Questions
+
+### What is React?  
+
+* What makes React a good tool and what are the parts of it you don't like.
+* Talk about projects you've used it for and why was the decision made?
+* Describe life cycle [See component life cycle doc]
+* How do you prefer to split up components?
+
+### What is Redux?
+
+* How does data flow through the app when using Redux?
+* How do you separate actions, reducers, and where do you prefer to dispatch actions? 
+* How do you prefer to deal with asynchronous actions? (What about Auth issues where have to reAuth and try again?)
+
+Most people can study those questions, so we like to put an emphasis on their thoughts and experiences with Redux or React. What was the most challenging aspect? Setting up the folder structure? Redux boilerplate? Random React/JSX specific errors? Nesting components? Passing functions and props around? Deploying? Setting up webpack, hot reloader, styles? This generally gives a better sense that they've used the tool and have a deep understanding instead of spending a week memorizing the documentation.
+
+### How would you solve jQuery vs React boundary for network requests?
+
+Let's say you are using a jQuery library.  How would you organize the code and integrate it with React?  (obviously unidea solution)
+
+### ES5 vs ES6
+
+What are the advantages and disadvantages of using one or the other? Include notes about default props, initial state, PropTypes, and DisplayName. [See ES5 vs ES6 doc]
+
+### React-Router library
+
+* When would you use this library?
+* How would you use this to create an experience like below where 
+** Only ONE page shows at a time depending on which link was clicked on
+** Active page link must be highlighted
+
+```
+<nav>
+	<li>Home</li>
+	<li>People</li>
+	<li>About</li>
+</nav>
+<div class="contents">
+	<div id="Home" class="page"><!--Home content--></div>
+	<div id="People" class="page"><!--People content--></div>
+	<div id="About" class="page"><!--About content--></div>
+</div>
+
+```
+
+### Problems With Below Code
+
+Identify two problems with the code below - 
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        // set the default internal state
+        this.state = {
+            clicks: 0
+        };
+    }
+
+    componentDidMount() {
+        this.refs.myComponentDiv.addEventListener(
+            ‘click’, 
+            this.clickHandler
+        );
+    }
+
+    componentWillUnmount() {
+        this.refs.myComponentDiv.removeEventListener(
+            ‘click’, 
+            this.clickHandler
+        );
+    }
+ ```
+
+1. The constructor does not pass its props to the super class. It should include the following line:
+
+```super(props);``` missing from constructor
+
+2. The event listener (when assigned via addEventListener()) is not properly scoped because ES2015 doesn’t provide autobinding. Therefore we might re-assign clickHandler in the constructor to include the correct binding to this:
+
+```this.clickHandler = this.clickHandler.bind(this)``` 
+
+
+# Resources
+
+* https://www.codementor.io/reactjs/tutorial/5-essential-reactjs-interview-questions
+* https://www.toptal.com/react/interview-questions
